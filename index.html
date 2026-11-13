@@ -6,15 +6,18 @@
   <title>Tech-Forward – Webseiten und Software-Einführung aus Wiehl</title>
   <meta name="description" content="Tech-Forward baut Webseiten und führt Software in kleinen Betrieben und Praxen ein. Ein fester Ansprechpartner: Pavel Rohn, Wiehl im Oberbergischen.">
   <link rel="canonical" href="https://www.tech-forward.de/">
-  <meta name="theme-color" content="#1b232b">
+  <meta name="theme-color" content="#000000">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
   <meta property="og:site_name" content="Tech-Forward">
   <meta property="og:title" content="Tech-Forward – Webseiten und Software-Einführung aus Wiehl">
   <meta property="og:description" content="Webseiten und Software-Einführung für kleine Betriebe und Praxen. Ein fester Ansprechpartner: Pavel Rohn, Wiehl im Oberbergischen.">
   <meta property="og:url" content="https://www.tech-forward.de/">
+  <meta property="og:image" content="https://www.tech-forward.de/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">
   <script type="application/ld+json">
   {
@@ -22,6 +25,8 @@
     "@type": "ProfessionalService",
     "name": "Tech-Forward",
     "url": "https://www.tech-forward.de/",
+    "logo": "https://www.tech-forward.de/img/logo-zeichen.svg",
+    "image": "https://www.tech-forward.de/img/og.png",
     "email": "info@tech-forward.de",
     "founder": { "@type": "Person", "name": "Pavel Rohn" },
     "address": {
@@ -39,116 +44,131 @@
 <body>
   <a class="springen" href="#inhalt">Zum Inhalt springen</a>
 
-  <header class="kopf">
-    <div class="innen">
-      <a class="marke" href="/" aria-label="Tech-Forward, zur Startseite">
-        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="1" width="24" height="24" fill="none" stroke="#eef0ea" stroke-width="2"/><rect x="1" y="1" width="8" height="24" fill="#2e6a4e"/></svg>
-        Tech-Forward
-      </a>
-      <nav class="navigation" aria-label="Hauptnavigation">
-        <a href="#leistungen">Leistungen</a>
-        <a href="#produkte">Eigene Produkte</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </div>
+  <header class="leiste">
+    <nav class="leiste-innen" aria-label="Hauptnavigation">
+      <a class="marke" href="/" aria-label="Tech-Forward, zur Startseite"><img src="/img/logo-zeichen.svg" alt="" width="21" height="25">Tech-Forward</a>
+      <ul class="leiste-links">
+        <li><a href="#safe-forward">Safe Forward</a></li>
+        <li><a href="#realive">RE:ALIVE</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="inhalt">
-    <section class="einstieg" aria-labelledby="titel">
-      <div class="innen">
-        <h1 id="titel">Software, die im Alltag ankommt.</h1>
-        <p class="anriss">Ich baue Webseiten und führe Software so ein, dass Abläufe in kleinen Betrieben und Praxen leichter werden. Mit einem festen Ansprechpartner vom ersten Gespräch bis nach dem Start.</p>
-        <p class="wer">Pavel Rohn, Wiehl im Oberbergischen</p>
-        <div class="handlung">
-          <a class="knopf knopf-voll" href="mailto:info@tech-forward.de?subject=Projektanfrage">Projekt anfragen</a>
-          <a class="knopf knopf-rahmen" href="#produkte">Eigene Produkte ansehen</a>
-        </div>
+    <section class="start" aria-labelledby="titel">
+      <img class="start-logo" src="/img/logo-hell.svg" alt="Tech-Forward" width="320" height="235">
+      <h1 id="titel">Software, die im Alltag ankommt.</h1>
+      <p class="start-text">Webseiten und Software-Einführung für kleine Betriebe und Praxen. Mit einem festen Ansprechpartner aus Wiehl im Oberbergischen.</p>
+      <div class="knoepfe">
+        <a class="pille" href="mailto:info@tech-forward.de?subject=Projektanfrage">Projekt anfragen</a>
+        <a class="pille pille-rahmen" href="#safe-forward">Eigene Produkte ansehen</a>
       </div>
     </section>
 
-    <section class="abschnitt" id="leistungen" aria-labelledby="leistungen-titel">
-      <div class="innen">
-        <h2 id="leistungen-titel">Was ich für Sie mache</h2>
-        <p class="einleitung">Zwei Dinge, die zusammengehören: wie Ihr Betrieb nach außen auftritt und wie es innen läuft.</p>
-        <div class="leistungen">
-          <div>
-            <h3>Webseiten</h3>
-            <p>Webseiten, die schnell laden, auf dem Handy gut aussehen und sich ohne teures Baukasten-Abo betreiben lassen.</p>
-            <ul>
-              <li>Aufbau und Texte gemeinsam mit Ihnen</li>
-              <li>Technisch sauber für Suchmaschinen aufbereitet</li>
-              <li>Impressum und Datenschutz von Anfang an dabei</li>
-              <li>Auf Wunsch Pflege und Änderungen nach dem Start</li>
-            </ul>
+    <div class="kacheln">
+      <section class="kachel kachel-sf" id="safe-forward" aria-labelledby="sf-titel">
+        <h2 id="sf-titel">Safe Forward</h2>
+        <p class="kachel-claim">Arbeitsschutz, Hygiene und QM an einem Ort.</p>
+        <p class="kachel-info">Eigene Software für Zahnarztpraxen, Arztpraxen und Betriebe. Website und Anwendung sind von Pavel Rohn entwickelt und werden von ihm betrieben.</p>
+        <div class="knoepfe">
+          <a class="pille" href="https://www.safe-forward.de/">safe-forward.de besuchen</a>
+        </div>
+        <div class="kachel-bild sf-bild">
+          <figure class="fenster">
+            <div class="fenster-leiste" aria-hidden="true"><span></span><span></span><span></span><div class="fenster-adresse">safe-forward.de</div></div>
+            <img src="/img/safe-forward-desktop.jpg" alt="Startseite von safe-forward.de am Computer" width="1800" height="1125" loading="lazy">
+          </figure>
+        </div>
+      </section>
+
+      <section class="kachel kachel-ra" id="realive" aria-labelledby="ra-titel">
+        <h2 id="ra-titel">RE:ALIVE</h2>
+        <p class="kachel-claim">Training als Rollenspiel. Jetzt im App Store.</p>
+        <p class="kachel-info">Eigene iPhone-App: Wer echte Übungen und Gewohnheiten erledigt, macht seinen Charakter stärker und kämpft sich durch Story, Dungeons, Turm und Arena.</p>
+        <div class="knoepfe">
+          <a class="pille" href="https://apps.apple.com/de/app/re-alive-fitness-rpg/id6811635733">Im App Store ansehen</a>
+        </div>
+        <div class="kachel-bild ra-bild">
+          <figure class="handy handy-seite"><img src="/img/realive-03-story.jpg" alt="RE:ALIVE: Story-Kampagne mit zehn Kapiteln" width="644" height="1400" loading="lazy"></figure>
+          <figure class="handy handy-mitte"><img src="/img/realive-01-training.jpg" alt="RE:ALIVE: Trainingsübersicht mit Essenzstufe und nächstem Ziel" width="644" height="1400" loading="lazy"></figure>
+          <figure class="handy handy-seite"><img src="/img/realive-02-character.jpg" alt="RE:ALIVE: Charakter mit Ausrüstung" width="644" height="1400" loading="lazy"></figure>
+        </div>
+      </section>
+
+      <div class="raster" id="leistungen">
+        <section class="kachel kachel-halb" aria-labelledby="web-titel">
+          <h2 id="web-titel">Webseiten</h2>
+          <p class="kachel-claim">Schnell, klar und ohne Baukasten-Abo.</p>
+          <ul class="punkte">
+            <li>Aufbau und Texte gemeinsam mit Ihnen</li>
+            <li>Technisch sauber für Google aufbereitet</li>
+            <li>Impressum und Datenschutz von Anfang an</li>
+            <li>Pflege und Änderungen nach dem Start</li>
+          </ul>
+          <a class="weiter" href="mailto:info@tech-forward.de?subject=Anfrage%20Webseite">Webseite anfragen</a>
+          <div class="kachel-bild web-bild">
+            <figure class="handy"><img src="/img/safe-forward-handy.jpg" alt="Beispiel: safe-forward.de auf dem Smartphone" width="600" height="1300" loading="lazy"></figure>
           </div>
-          <div>
-            <h3>Prozesse und Software-Einführung</h3>
-            <p>Wo heute Excel, Papierordner und Zurufe den Takt vorgeben, schaue ich mir Ihre Abläufe an und führe passende Software ein.</p>
-            <ul>
-              <li>Abläufe aufnehmen und Engpässe benennen</li>
-              <li>Passende Software auswählen, auch fertige Lösungen statt Eigenbau</li>
-              <li>Einrichtung, Übernahme der Daten und Schulung des Teams</li>
-              <li>Kleine Automatisierungen, wo sie Zeit sparen</li>
+        </section>
+
+        <section class="kachel kachel-halb" aria-labelledby="sw-titel">
+          <h2 id="sw-titel">Software-Einführung</h2>
+          <p class="kachel-claim">Weniger Excel, Zettel und Zurufe.</p>
+          <ul class="punkte">
+            <li>Abläufe aufnehmen und Engpässe benennen</li>
+            <li>Passende Software auswählen, auch fertige Lösungen</li>
+            <li>Einrichtung, Datenübernahme und Schulung</li>
+            <li>Kleine Automatisierungen, wo sie Zeit sparen</li>
+          </ul>
+          <a class="weiter" href="mailto:info@tech-forward.de?subject=Anfrage%20Software-Einf%C3%BChrung">Beratung anfragen</a>
+          <div class="kachel-bild wandel-bild">
+            <ul class="wandel-vorher" aria-label="Vorher">
+              <li>Excel-Listen</li>
+              <li>Papierordner</li>
+              <li>Zurufe</li>
+              <li>Zettel am Monitor</li>
             </ul>
+            <div class="wandel-pfeil" aria-hidden="true"></div>
+            <p class="wandel-nachher"><img src="/img/logo-zeichen.svg" alt="" width="22" height="26">Eine Software, ein Ort</p>
           </div>
-        </div>
+        </section>
       </div>
+    </div>
+
+    <section class="ablauf" aria-labelledby="ablauf-titel">
+      <h2 id="ablauf-titel">So läuft ein Projekt.</h2>
+      <ol class="schritte">
+        <li>
+          <h3>Gespräch</h3>
+          <p>Wir klären, was heute hakt und was am Ende anders sein soll. Das erste Gespräch kostet nichts.</p>
+        </li>
+        <li>
+          <h3>Angebot und Umsetzung</h3>
+          <p>Sie bekommen vorab ein Angebot mit Umfang und Preis. Danach setze ich um, und Sie sehen Zwischenstände.</p>
+        </li>
+        <li>
+          <h3>Begleitung</h3>
+          <p>Nach dem Start bleibe ich erreichbar: für Fragen, Anpassungen und die nächsten Schritte.</p>
+        </li>
+      </ol>
     </section>
 
-    <section class="abschnitt" id="produkte" aria-labelledby="produkte-titel">
-      <div class="innen">
-        <h2 id="produkte-titel">Was ich selbst gebaut habe</h2>
-        <p class="einleitung">Zwei eigene Produkte, entwickelt und betrieben von Tech-Forward-Inhaber Pavel Rohn. Sie zeigen, wie ich arbeite: von der Idee bis zum laufenden Betrieb.</p>
-        <div class="produkte">
-          <article class="produkt">
-            <p class="art">Arbeitsschutz-Software</p>
-            <h3>Safe Forward</h3>
-            <p>Gefährdungsbeurteilungen, Unterweisungen, Prüffristen und Nachweise an einem Ort, mit Vorlagen für Zahnarztpraxen, Arztpraxen und Betriebe.</p>
-            <a href="https://www.safe-forward.de/">safe-forward.de besuchen</a>
-          </article>
-          <article class="produkt">
-            <p class="art">App im App Store</p>
-            <h3>RE:ALIVE</h3>
-            <p>Ein Fitness-Rollenspiel: Wer echte Übungen und Gewohnheiten erledigt, macht seinen Charakter stärker und kämpft sich durch Dungeons, Turm und Arena.</p>
-            <a href="https://apps.apple.com/de/app/re-alive-fitness-rpg/id6811635733">RE:ALIVE im App Store ansehen</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="abschnitt" id="ablauf" aria-labelledby="ablauf-titel">
-      <div class="innen">
-        <h2 id="ablauf-titel">So läuft ein Projekt</h2>
-        <p class="einleitung">Ohne Umwege und ohne Fachchinesisch.</p>
-        <ol class="ablauf">
-          <li>
-            <h3>Gespräch</h3>
-            <p>Wir klären, was heute hakt und was am Ende anders sein soll. Das erste Gespräch kostet nichts.</p>
-          </li>
-          <li>
-            <h3>Angebot und Umsetzung</h3>
-            <p>Sie bekommen vorab ein Angebot mit Umfang und Preis. Danach setze ich um, und Sie sehen Zwischenstände.</p>
-          </li>
-          <li>
-            <h3>Begleitung</h3>
-            <p>Nach dem Start bleibe ich erreichbar: für Fragen, Anpassungen und die nächsten Schritte.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="abschnitt kontakt" id="kontakt" aria-labelledby="kontakt-titel">
-      <div class="innen">
+    <div class="kacheln">
+      <section class="kachel kachel-kontakt" id="kontakt" aria-labelledby="kontakt-titel">
         <h2 id="kontakt-titel">Erzählen Sie mir, was hakt.</h2>
-        <a class="mail" href="mailto:info@tech-forward.de">info@tech-forward.de</a>
-        <address class="anschrift">Tech-Forward, Pavel Rohn, Angfurtener Str. 1B, 51674 Wiehl</address>
-      </div>
-    </section>
+        <p class="kachel-claim">Eine kurze E-Mail genügt.</p>
+        <a class="mail-gross" href="mailto:info@tech-forward.de">info@tech-forward.de</a>
+        <address class="anschrift">Tech-Forward, Pavel Rohn<br>Angfurtener Str. 1B, 51674 Wiehl</address>
+      </section>
+    </div>
   </main>
 
   <footer class="fuss">
-    <div class="innen">
-      <span>© 2026 Tech-Forward</span>
+    <p>Safe Forward und RE:ALIVE sind eigene Produkte von Pavel Rohn, dem Inhaber von Tech-Forward.</p>
+    <div class="fuss-zeile">
+      <span>Copyright © 2026 Tech-Forward. Alle Rechte vorbehalten.</span>
       <nav aria-label="Rechtliches">
         <a href="/impressum/">Impressum</a>
         <a href="/datenschutz/">Datenschutz</a>
