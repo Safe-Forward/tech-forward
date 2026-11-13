@@ -1141,6 +1141,86 @@ a:hover {
   transform: translateX(-50%) translateX(calc(var(--q) * 84%)) translateY(calc(40px + (1 - var(--q)) * 70px)) rotateY(calc(var(--q) * -22deg)) scale(0.86);
 }
 
+/* Safe Forward von innen */
+.einblick {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 60px 22px 120px;
+}
+.einblick-titel {
+  font-size: clamp(34px, 4.6vw, 56px);
+  line-height: 1.06;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+.einblick-reihe {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(84%, 380px);
+  gap: 18px;
+  margin: 56px -22px 0;
+  padding: 10px 22px 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.einblick-reihe::-webkit-scrollbar {
+  display: none;
+}
+.einblick-reihe > * {
+  scroll-snap-align: center;
+}
+@media (min-width: 900px) {
+  .einblick-reihe {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 64px 0 0;
+    padding: 0;
+    overflow: visible;
+  }
+}
+.einblick-karte {
+  margin: 0;
+  text-align: left;
+  border-radius: 28px;
+}
+.einblick-bild {
+  position: relative;
+  height: 250px;
+  padding: 26px 0 0 26px;
+  overflow: hidden;
+  background: radial-gradient(ellipse 80% 90% at 30% 120%, rgba(37, 99, 235, 0.35), rgba(16, 185, 129, 0.12) 50%, transparent 75%);
+}
+.einblick-bild img {
+  display: block;
+  width: 150%;
+  max-width: none;
+  height: auto;
+  border-radius: 12px 0 0 0;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: transform 0.8s var(--sanft);
+}
+.einblick-bild img.nah {
+  width: 210%;
+}
+.einblick-karte:hover .einblick-bild img {
+  transform: translate(-4%, -3%) scale(1.03);
+}
+.einblick-karte figcaption {
+  padding: 24px 26px 30px;
+  color: var(--grau-hell);
+}
+.einblick-karte strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 /* ---------- Ablauf ---------- */
 .ablauf {
   max-width: 1180px;
