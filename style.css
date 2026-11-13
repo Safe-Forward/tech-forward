@@ -1,0 +1,449 @@
+/* Tech-Forward – Farben des Bergischen Dreiklangs: Schiefer, Kalkweiß, Ladengrün */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/fonts/bricolage-grotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-stretch: 75% 100%;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/source-sans-3.woff2") format("woff2");
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+:root {
+  --schiefer: #1b232b;
+  --schiefer-hell: #26303a;
+  --schiefer-linie: #34404c;
+  --kalkweiss: #eef0ea;
+  --grauwacke: #9aa5af;
+  --ladengruen: #2e6a4e;
+  --ladengruen-hell: #8fcba8;
+  --rahmen: rgba(238, 240, 234, 0.82);
+  --display: "Bricolage Grotesque", "Avenir Next Condensed", "Arial Narrow", sans-serif;
+  --text: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --breite: 72rem;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--schiefer);
+  color: var(--kalkweiss);
+  font-family: var(--text);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--ladengruen-hell);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+a:hover {
+  color: var(--kalkweiss);
+}
+:focus-visible {
+  outline: 2px solid var(--ladengruen-hell);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.springen {
+  position: absolute;
+  left: -999px;
+  top: 0.5rem;
+  background: var(--kalkweiss);
+  color: var(--schiefer);
+  padding: 0.5rem 1rem;
+  z-index: 10;
+}
+.springen:focus {
+  left: 1rem;
+}
+
+.innen {
+  width: min(100% - 2.5rem, var(--breite));
+  margin-inline: auto;
+}
+
+/* Kopf */
+.kopf {
+  border-bottom: 1px solid var(--schiefer-linie);
+}
+.kopf .innen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 4.5rem;
+  flex-wrap: wrap;
+}
+.marke {
+  font-family: var(--display);
+  font-weight: 700;
+  font-stretch: 80%;
+  font-size: 1.45rem;
+  letter-spacing: -0.01em;
+  color: var(--kalkweiss);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.marke svg {
+  flex: none;
+}
+.navigation {
+  display: flex;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+.navigation a {
+  color: var(--grauwacke);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.navigation a:hover {
+  color: var(--kalkweiss);
+}
+
+/* Einstieg mit Schieferschuppen – das eine laute Element der Seite */
+.einstieg {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--schiefer-linie);
+}
+.einstieg::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 38%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='40' viewBox='0 0 56 40'%3E%3Cg fill='none' stroke='%23455361' stroke-width='1.2'%3E%3Cpath d='M0 20 A14 18 0 0 0 28 20 A14 18 0 0 0 56 20'/%3E%3Cpath d='M-14 40 A14 18 0 0 0 14 40 A14 18 0 0 0 42 40 A14 18 0 0 0 70 40'/%3E%3Cpath d='M-14 0 A14 18 0 0 0 14 0 A14 18 0 0 0 42 0 A14 18 0 0 0 70 0'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 56px 40px;
+  -webkit-mask-image: linear-gradient(100deg, transparent 0%, #000 45%, #000 100%);
+  mask-image: linear-gradient(100deg, transparent 0%, #000 45%, #000 100%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+@media (max-width: 40rem) {
+  .einstieg::before {
+    inset: 0 0 0 55%;
+    opacity: 0.55;
+  }
+}
+.einstieg .innen {
+  position: relative;
+  padding-block: clamp(4rem, 12vw, 9rem) clamp(3.5rem, 9vw, 7rem);
+}
+.einstieg h1 {
+  font-family: var(--display);
+  font-weight: 760;
+  font-stretch: 76%;
+  font-size: clamp(3rem, 9.5vw, 7.25rem);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  margin: 0;
+  max-width: 11ch;
+  text-wrap: balance;
+}
+.einstieg .anriss {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  color: var(--kalkweiss);
+  max-width: 38rem;
+  margin: 2rem 0 0;
+}
+.einstieg .wer {
+  color: var(--grauwacke);
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+}
+.handlung {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.knopf {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1.5px solid var(--rahmen);
+}
+.knopf-voll {
+  background: var(--ladengruen);
+  border-color: var(--ladengruen);
+  color: var(--kalkweiss);
+}
+.knopf-voll:hover {
+  background: #357a5a;
+  border-color: #357a5a;
+  color: var(--kalkweiss);
+}
+.knopf-rahmen {
+  color: var(--kalkweiss);
+}
+.knopf-rahmen:hover {
+  background: var(--schiefer-hell);
+}
+
+/* Abschnitte */
+.abschnitt {
+  padding-block: clamp(4rem, 9vw, 6.5rem);
+  border-bottom: 1px solid var(--schiefer-linie);
+}
+.abschnitt h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-stretch: 82%;
+  font-size: clamp(2rem, 4.5vw, 3.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0 0 1rem;
+  text-wrap: balance;
+}
+.abschnitt .einleitung {
+  color: var(--grauwacke);
+  max-width: 40rem;
+  margin: 0 0 3rem;
+}
+
+/* Leistungen: zwei Spalten, getrennt durch eine Linie statt Karten */
+.leistungen {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 52rem) {
+  .leistungen {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .leistungen > div + div {
+    border-left: 1px solid var(--schiefer-linie);
+    padding-left: 3rem;
+  }
+  .leistungen > div:first-child {
+    padding-right: 3rem;
+  }
+}
+.leistungen h3 {
+  font-family: var(--display);
+  font-weight: 650;
+  font-stretch: 88%;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+  text-wrap: balance;
+}
+.leistungen p {
+  margin: 0 0 1.25rem;
+  max-width: 34rem;
+}
+.leistungen ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.leistungen li {
+  position: relative;
+  padding: 0.55rem 0 0.55rem 1.4rem;
+  border-top: 1px solid var(--schiefer-linie);
+  color: var(--kalkweiss);
+}
+.leistungen li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.15rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  background: var(--ladengruen);
+}
+
+/* Produkte: zwei Fenster mit grünem Laden an der Kante */
+.produkte {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 52rem) {
+  .produkte {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.produkt {
+  background: var(--schiefer-hell);
+  border: 1.5px solid var(--rahmen);
+  border-left: 0.75rem solid var(--ladengruen);
+  padding: 2rem 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.produkt .art {
+  color: var(--grauwacke);
+  font-size: 1rem;
+  margin: 0 0 0.35rem;
+}
+.produkt h3 {
+  font-family: var(--display);
+  font-weight: 760;
+  font-stretch: 80%;
+  font-size: 2.2rem;
+  line-height: 1;
+  margin: 0 0 1rem;
+}
+.produkt p {
+  margin: 0 0 1.5rem;
+}
+.produkt a {
+  margin-top: auto;
+  font-weight: 600;
+}
+
+/* Ablauf: echte Reihenfolge, daher nummeriert */
+.ablauf {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 2rem;
+  counter-reset: schritt;
+}
+@media (min-width: 52rem) {
+  .ablauf {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+.ablauf li {
+  counter-increment: schritt;
+  border-top: 2px solid var(--ladengruen);
+  padding-top: 1.25rem;
+}
+.ablauf li::before {
+  content: counter(schritt);
+  display: block;
+  font-family: var(--display);
+  font-weight: 760;
+  font-stretch: 78%;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--ladengruen-hell);
+  margin-bottom: 0.75rem;
+}
+.ablauf h3 {
+  font-family: var(--display);
+  font-weight: 650;
+  font-stretch: 88%;
+  font-size: 1.4rem;
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+}
+.ablauf p {
+  margin: 0;
+  color: var(--grauwacke);
+}
+
+/* Kontakt */
+.kontakt h2 {
+  max-width: 16ch;
+}
+.mail {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 700;
+  font-stretch: 80%;
+  font-size: clamp(1.8rem, 6.5vw, 4rem);
+  line-height: 1.1;
+  color: var(--kalkweiss);
+  text-decoration: underline;
+  text-decoration-color: var(--ladengruen);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+  overflow-wrap: anywhere;
+  margin: 1rem 0 1.5rem;
+}
+.mail:hover {
+  color: var(--ladengruen-hell);
+}
+.anschrift {
+  color: var(--grauwacke);
+  margin: 0;
+  font-style: normal;
+}
+
+/* Fuß */
+.fuss {
+  padding-block: 2rem 2.5rem;
+  color: var(--grauwacke);
+  font-size: 0.95rem;
+}
+.fuss .innen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  justify-content: space-between;
+}
+.fuss nav {
+  display: flex;
+  gap: 1.5rem;
+}
+.fuss a {
+  color: var(--grauwacke);
+}
+.fuss a:hover {
+  color: var(--kalkweiss);
+}
+
+/* Rechtstexte */
+.recht {
+  padding-block: clamp(3rem, 8vw, 5rem);
+}
+.recht .innen {
+  max-width: 46rem;
+}
+.recht h1 {
+  font-family: var(--display);
+  font-weight: 760;
+  font-stretch: 80%;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1;
+  margin: 0 0 2rem;
+}
+.recht h2 {
+  font-family: var(--display);
+  font-weight: 650;
+  font-stretch: 88%;
+  font-size: 1.35rem;
+  margin: 2.5rem 0 0.5rem;
+}
+.recht p,
+.recht li {
+  color: var(--kalkweiss);
+}
+.recht address {
+  font-style: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
