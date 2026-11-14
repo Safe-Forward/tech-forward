@@ -1557,13 +1557,14 @@ a:hover {
   margin-top: 64px;
 }
 .start-hilfe {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 6px;
   margin: 34px auto 0;
   padding: 0;
   list-style: none;
-  text-align: left;
+  text-align: center;
   color: var(--grau-hell);
   font-size: 15px;
 }
