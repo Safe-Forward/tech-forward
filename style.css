@@ -1705,3 +1705,205 @@ a:hover {
 .karte-claim {
   text-wrap: balance;
 }
+
+/* ---------- Leistungsseiten (/webseiten/, /software-einfuehrung/, /software-entwicklung/) ---------- */
+.karte .weiter.mehr {
+  margin-right: 22px;
+  color: var(--text);
+}
+.ls {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 22px 100px;
+}
+.ls-pfad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--grau);
+}
+.ls-pfad a {
+  color: var(--grau-hell);
+}
+.ls-kopf {
+  padding: 56px 0 24px;
+}
+.ls-kopf h1 {
+  margin: 0;
+  font-size: clamp(36px, 6vw, 60px);
+  line-height: 1.06;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.ls-intro {
+  margin: 22px 0 0;
+  max-width: 660px;
+  font-size: clamp(18px, 2.2vw, 21px);
+  line-height: 1.5;
+  color: var(--grau-hell);
+  text-wrap: pretty;
+}
+.ls-knoepfe {
+  justify-content: flex-start;
+}
+.ls-abschnitt {
+  padding-top: 56px;
+}
+.ls-abschnitt h2 {
+  margin: 0 0 16px;
+  font-size: clamp(26px, 3.4vw, 34px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.ls-abschnitt p {
+  margin: 0;
+  max-width: 680px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--grau-hell);
+}
+.ls .punkte {
+  max-width: 680px;
+  margin: 8px 0 0;
+}
+.ls-schritte {
+  list-style: none;
+  counter-reset: schritt;
+  display: grid;
+  gap: 14px;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.ls-schritte li {
+  counter-increment: schritt;
+  position: relative;
+  padding: 18px 20px 18px 64px;
+  border-radius: 18px;
+  background: var(--kachel);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+.ls-schritte li::before {
+  content: counter(schritt);
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  background: var(--blau);
+  color: #fff;
+}
+.ls-schritte h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.ls-schritte p {
+  margin: 4px 0 0;
+  font-size: 16px;
+}
+.ls-faq details {
+  border-top: 1px solid var(--linie);
+  padding: 4px 0;
+}
+.ls-faq details:last-child {
+  border-bottom: 1px solid var(--linie);
+}
+.ls-faq summary {
+  cursor: pointer;
+  padding: 14px 0;
+  font-size: 18px;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.ls-faq summary::-webkit-details-marker {
+  display: none;
+}
+.ls-faq summary::after {
+  content: "+";
+  color: var(--link);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 0.25s var(--sanft);
+}
+.ls-faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+.ls-faq details p {
+  padding: 0 0 16px;
+}
+.ls-belege {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+@media (min-width: 700px) {
+  .ls-belege {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.ls-beleg {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  border-radius: 20px;
+  background: var(--kachel);
+  color: var(--text);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  transition: background 0.2s;
+}
+.ls-beleg:hover {
+  background: var(--kachel-hell);
+  text-decoration: none;
+}
+.ls-beleg img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+.ls-beleg span {
+  color: var(--grau-hell);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.ls .cta-band {
+  margin-top: 72px;
+}
+.ls-andere {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 24px;
+  margin-top: 48px;
+}
+.ls-andere p {
+  margin: 0;
+  color: var(--grau);
+  font-size: 14px;
+}
+.fuss-leistungen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-bottom: 14px;
+}
+.fuss .fuss-leistungen a {
+  color: var(--grau-hell);
+}
