@@ -1616,3 +1616,91 @@ a:hover {
     padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
   }
 }
+
+/* ---------- Dritte Leistung: Software und Apps nach Maß ---------- */
+.geraete {
+  position: relative;
+  width: min(440px, 86%);
+  aspect-ratio: 16 / 10;
+  max-width: 100%;
+}
+.geraet-browser {
+  position: absolute;
+  left: 0;
+  top: 8%;
+  width: 82%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0e0e10;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 30px 60px -20px rgba(0, 0, 0, 0.9);
+}
+.geraet-browser img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.geraet-handy {
+  position: absolute;
+  right: 0;
+  bottom: -4%;
+  width: 30%;
+  aspect-ratio: 644 / 1400;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 3px solid #2a2a2e;
+  background: #000;
+  box-shadow: 0 30px 60px -16px rgba(0, 0, 0, 0.95);
+}
+.geraet-handy img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.laeuft .geraet-browser {
+  animation: schweben 7s ease-in-out infinite;
+}
+.laeuft .geraet-handy {
+  animation: schweben 6s ease-in-out -2s infinite reverse;
+}
+@keyframes schweben {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.karte-beleg {
+  margin: 18px 0 0;
+  color: var(--grau);
+  font-size: 14px;
+}
+.karte-beleg a {
+  color: var(--link);
+}
+@media (min-width: 900px) {
+  .karte-breit-huelle {
+    grid-column: 1 / -1;
+  }
+  .karte-breit {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    text-align: left;
+  }
+  .karte-breit .karte-bild {
+    height: 100%;
+    min-height: 420px;
+  }
+  .karte-breit .karte-text {
+    padding: 44px 48px 44px 8px;
+  }
+  .karte-breit .punkte {
+    margin-left: 0;
+  }
+}
+.ruhig .geraet-browser,
+.ruhig .geraet-handy {
+  animation: none;
+}
+.karte h3,
+.karte-claim {
+  text-wrap: balance;
+}
