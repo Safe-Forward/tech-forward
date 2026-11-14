@@ -31,6 +31,16 @@
   const start = document.querySelector('.start');
   const leiste = document.querySelector('.leiste');
 
+  // Schnellkontakt auf dem Handy: erst nach der Startfläche zeigen, im Kontaktbereich wieder ausblenden
+  const kontakt = document.getElementById('kontakt');
+  const schnellkontakt = () => {
+    const h = window.innerHeight;
+    const imKontakt = kontakt && kontakt.getBoundingClientRect().top < h * 0.85;
+    html.classList.toggle('cta-an', window.scrollY > h * 0.8 && !imKontakt);
+  };
+  window.addEventListener('scroll', schnellkontakt, { passive: true });
+  schnellkontakt();
+
   if (ruhig) {
     html.classList.add('ruhig', 'los');
     document.querySelectorAll('[data-zeigen]').forEach((el) => el.classList.add('sichtbar'));
